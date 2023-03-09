@@ -74,7 +74,7 @@ def predict_note_authentication(Store, Dept, IsHoliday, Temperature, Fuel_Price,
             description: The output values
         
     """
-    loaded_model = pickle.load(open('./CatBoostRegressor','rb'))
+    loaded_model = pickle.load(open(./CatBoostRegressor,'rb'))
     prediction=loaded_model.predict([[Store, Dept,IsHoliday, Temperature, Fuel_Price, Size, day, year,
        month, mean, std, skew, kurtosis, Type_A, Type_B, Type_C]])
     print(prediction)
@@ -112,8 +112,8 @@ def main():
        month, mean, std, skew, kurtosis, Type_A, Type_B, Type_C)
     st.success('The Weekly forecasted Sales is {}'.format(result))
     
-    chart_data = pd.read_csv('./data_for_chart.csv')
-    train_data = pd.read_csv('./train.csv')
+    chart_data = pd.read_csv(./data_for_chart.csv)
+    train_data = pd.read_csv(./train.csv)
     
     if st.button("Forecast line chart"):
         st.line_chart(chart_data, x='Date', y='Weekly_Sales')
