@@ -88,29 +88,29 @@ def main():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
-    Store = st.text_input("Store","1")
-    Dept = st.text_input("Dept","1")
-    IsHoliday = st.text_input("IsHoliday","1")
-    Temperature= st.text_input("Temperature","44")
-    Fuel_Price= st.text_input("Fuel_Price","2.3")
-    Size= st.text_input("Size","151315")
-    day = st.text_input("day","1")
-    year= st.text_input("year","2012")
-    month = st.text_input("month","01")
-    mean = st.text_input("mean","22513")
-    std = st.text_input("std","9854")
-    skew = st.text_input("skew","2.014")
-    kurtosis = st.text_input("kurtosis","3.36")
-    Type_A = st.text_input("Type_A","1")
-    Type_B= st.text_input("Type_B","0")
-    Type_C= st.text_input(" Type_C","0")
+#     Store = st.text_input("Store","1")
+#     Dept = st.text_input("Dept","1")
+#     IsHoliday = st.text_input("IsHoliday","1")
+#     Temperature= st.text_input("Temperature","44")
+#     Fuel_Price= st.text_input("Fuel_Price","2.3")
+#     Size= st.text_input("Size","151315")
+#     day = st.text_input("day","1")
+#     year= st.text_input("year","2012")
+#     month = st.text_input("month","01")
+#     mean = st.text_input("mean","22513")
+#     std = st.text_input("std","9854")
+#     skew = st.text_input("skew","2.014")
+#     kurtosis = st.text_input("kurtosis","3.36")
+#     Type_A = st.text_input("Type_A","1")
+#     Type_B= st.text_input("Type_B","0")
+#     Type_C= st.text_input(" Type_C","0")
 
 
-    result=""
-    if st.button("Predict Weekly Sales"):
-        result=predict_note_authentication(Store, Dept, IsHoliday, Temperature, Fuel_Price, Size, day, year,
-       month, mean, std, skew, kurtosis, Type_A, Type_B, Type_C)
-    st.success('The Weekly forecasted Sales is {}'.format(result))
+#     result=""
+#     if st.button("Predict Weekly Sales"):
+#         result=predict_note_authentication(Store, Dept, IsHoliday, Temperature, Fuel_Price, Size, day, year,
+#        month, mean, std, skew, kurtosis, Type_A, Type_B, Type_C)
+#     st.success('The Weekly forecasted Sales is {}'.format(result))
     
     chart_data = pd.read_csv("data_for_chart.csv")
     train_data = pd.read_csv("train.csv")
