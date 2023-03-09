@@ -1,4 +1,5 @@
-pip install catboost
+import os 
+os.system('pip install catboost')
 from catboost import CatBoostRegressor
 import numpy as np
 import pickle
