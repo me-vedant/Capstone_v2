@@ -1,4 +1,4 @@
-!pip3 install catboost
+pip install catboost
 from catboost import CatBoostRegressor
 import numpy as np
 import pickle
