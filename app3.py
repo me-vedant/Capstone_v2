@@ -1,23 +1,16 @@
-
+!pip3 install catboost
+from catboost import CatBoostRegressor
 import numpy as np
 import pickle
 import pandas as pd
 #from flasgger import Swagger
 import streamlit as st
 
+
 from PIL import Image
 def welcome():
     return "Welcome All"
 
-def install_and_import(package):
-    import importlib
-    try:
-        importlib.import_module(package)
-    except ImportError:
-        import pip
-        pip.main(['install', package])
-    finally:
-        globals()[package] = importlib.import_module(package)
 
 def predict_note_authentication(Store, Dept, IsHoliday, Temperature, Fuel_Price, Size, day, year,
        month, mean, std, skew, kurtosis, Type_A, Type_B, Type_C):
@@ -91,7 +84,6 @@ def predict_note_authentication(Store, Dept, IsHoliday, Temperature, Fuel_Price,
     return prediction
 
 def main():
-    install_and_import('transliterate')
     st.title("weekly sales")
     html_temp = """
     <div style="background-color:tomato;padding:10px">
