@@ -7,4 +7,4 @@ sklearn
 streamlit
 matplotlib
 CatBoostRegressor
-catboost
+CatBoost
