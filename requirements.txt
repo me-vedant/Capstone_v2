@@ -6,5 +6,3 @@ scipy
 sklearn
 streamlit
 matplotlib
-CatBoostRegressor
-CatBoost
